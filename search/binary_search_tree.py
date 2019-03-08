@@ -8,7 +8,57 @@ class BinarySearchTree:
     pass    
 
   def breadth_first_for_each(self, cb):
-    pass
+      q = []
+      parent = self
+      if parent.left == None:
+          print('no left')
+      elif parent.right == None:
+          print('no right')
+      else:
+
+
+
+      # if parent.left == None:
+      #     print('no left child')
+      # else:
+      #     print('left child => ', parent.left.value)
+
+      # if parent.right == None:
+      #   print('no right child')
+      # else:
+      #   print('right child => ', parent.right.value)
+
+
+
+
+      # first add the parent.
+      # check if there is a left child.
+      # if so, add it to the queue.
+      #     if there isn't a left child
+      #         return
+      # check if there is a right child 
+      # if there is add it to the queue.
+      #     if there isn't a right child return
+
+      
+
+
+
+      # we need a queue.
+
+      # Then we need to add the root.
+      # Look at the root. Add it's children to the queue
+      # Call the callback on the root.
+      # Then pop the root from the queue
+      # then repeat with the children.
+      # don't need recursion. because we have to go through the entire tree
+      # We have to be careful of NoneType problems.
+      # This is a binary search tree, not a heap.
+      # So we have to find a way to check for children.
+
+
+
+
 
   def insert(self, value):
     new_tree = BinarySearchTree(value)
@@ -47,3 +97,11 @@ class BinarySearchTree:
         max_value = current.value
       current = current.right
     return max_value
+
+bst = BinarySearchTree(5)
+bst.insert(3)
+bst.insert(4)
+# bst.insert(10)
+# bst.insert(9)
+# bst.insert(11)
+bst.breadth_first_for_each(lambda x: x + 1)
