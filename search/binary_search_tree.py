@@ -10,19 +10,21 @@ class BinarySearchTree:
   def breadth_first_for_each(self, cb):
       q = [self]
       while len(q) > 0:
-          # print(f'q zeor: {q[0].value}')
-          if q[0].left == None:
-              print('no left')
-          else:
-              # print('left ', q[0].left.value )
-              q.append(q[0].left)
-          if q[0].right == None:
-              print('no right')
-          else:
-              q.append(q[0].left)
-              # print('right ', q[0].right.value )
-      cb(q[0])
-      q.pop(0)
+        print('array', q)
+          # print('len', len(q))
+          # print(f'q zero: {q[0].value}')
+        if q[0].left != None:
+           print('left', q[0].left.value)
+           q.append(q[0].left)
+          # print('left ', q[0].left.value )
+        if q[0].right != None:
+           print('right', q[0].right.value)
+           q.append(q[0].right)
+          # print('right ', q[0].right.value )
+        cb(q[0].value)
+        # print('len before', len(q))
+        q.pop(0)
+        # print('len after', len(q))
 
 # what I want to know is if there are children. I want to know if there is a left child or a right child. then I want to add any children to the array.
 
