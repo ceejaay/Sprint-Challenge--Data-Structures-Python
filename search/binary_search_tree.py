@@ -10,7 +10,7 @@ class BinarySearchTree:
   def breadth_first_for_each(self, cb):
       q = [self]
       while len(q) > 0:
-        print('array', q)
+        print('array len', len(q))
           # print('len', len(q))
           # print(f'q zero: {q[0].value}')
         if q[0].left != None:
